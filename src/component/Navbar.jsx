@@ -4,9 +4,9 @@ import MenuBar from "./MenuBar";
 
 const Navbar = () => {
   return (
-    <div >
+    <div className="sticky top-0 z-30 bg-white">
       <Topbar />
-<MenuBar/>
+      <MenuBar />
     </div>
   );
 };

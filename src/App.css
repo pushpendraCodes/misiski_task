@@ -68,9 +68,36 @@ height: 350px;
 .lead-box {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 22%;
   width:14rem;
 height: 350px;
+  overflow-y: auto;
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apple-qr{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width:8rem;
+height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.google-qr{
+  position: absolute;
+  top: 90%;
+  left: 6%;
+  width:10rem;
+height: 200px;
   overflow-y: auto;
   background-color: #fff;
   /* border: 1px solid #ccc; */

@@ -1488,3 +1488,49 @@ export const products = [
   // Add more products as needed...
 ];
 
+
+export const imageData = [
+  {
+    name: "Sunset",
+    src: "https://cdn.faire.com/fastly/15cf08198a86dba2e5f9a0ad13729203d5cdfb14d19f3440bda5b045c0c5ef46.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+  {
+    name: "Mountain",
+    src: "https://cdn.faire.com/fastly/2780e295939308b2d9d00203a07a3265aae5c48cb89462faa4c1c7bd08ea8e0c.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+  {
+    name: "Beach",
+    src: "https://cdn.faire.com/fastly/d12fd27df0ffc01e76a9a329b67bc9333f0244abb4b5d6c860a603841c76d5fb.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+  {
+    name: "Forest",
+    src: "https://cdn.faire.com/fastly/c0510d4a93f4ff78f090e96c8043b435af8a3a7368c2a6213ecd4980e2166e5b.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+  {
+    name: "City",
+    src: "https://cdn.faire.com/fastly/749ffe09238499ddd51da5399555e1a3e14c757e1b06e3829306ae36dbb1df2d.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+  {
+    name: "Lake",
+    src: "https://cdn.faire.com/fastly/4e1184f7c9c7a3da4c682abafdd856d7f824b5788b47617914a1d1fd358019f9.jpeg?dpr=1.5&fit=crop&format=jpg&height=450&width=360",
+  },
+];
+
+
+export const faqData = [
+  {
+    question: "What is React?",
+    answer: "React is a JavaScript library for building user interfaces.",
+  },
+  {
+    question: "How do you create components in React?",
+    answer:
+      "You can create components in React by defining JavaScript functions or classes.",
+  },
+  {
+    question: "What is JSX?",
+    answer:
+      "JSX (JavaScript XML) is a syntax extension used in React to describe what the UI should look like.",
+  },
+  // Add more FAQ items as needed
+];

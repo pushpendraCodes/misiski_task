@@ -72,6 +72,7 @@ const Product = ({ product }) => {
           </button> */}
         </div>
       </div>
+
     </div>
   );
 };
