@@ -10,7 +10,7 @@ import Footer from './component/Footer'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='px-1 py-1 md:px-0 md:py-0'>
       <Navbar/>
       <BreadCrumbs/>
       <Products/>
