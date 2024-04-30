@@ -5,13 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const Explore = ({ images }) => {
-
-
   const PrevArrow = (props) => {
     const { onClick } = props;
     return (
       <button
-        className="absolute top-1/2 -left-10 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md z-10"
+        className="absolute top-1/2 left-0 md:-left-10 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md z-10"
         onClick={onClick}>
         <BsChevronLeft size={24} />
       </button>
@@ -22,13 +20,12 @@ const Explore = ({ images }) => {
     const { onClick } = props;
     return (
       <button
-        className="absolute top-1/2 -right-10 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md z-10"
+        className="absolute right-0 top-1/2 md:-right-10 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full shadow-md z-10"
         onClick={onClick}>
         <BsChevronRight size={24} />
       </button>
     );
   };
-
 
   const settings = {
     dots: false,
@@ -61,29 +58,30 @@ const Explore = ({ images }) => {
   };
 
   return (
-
-    <div className="max-w-[90%] m-auto">
-    <div style={{ fontFamily: "nantes, georgia, serif" }} className="flex justify-between my-4">
-        <p></p>
+    <div className=" w-full md:max-w-[90%] m-auto">
+      <div
+        style={{ fontFamily: "nantes, georgia, serif" }}
+        className="flex justify-between my-4">
+        <p className="hidden md:block"></p>
         <p className="text-xl">Keep exploring</p>
         <p className="underline">All Brands</p>
-    </div>
-    <div className="max-w-screen-lg mx-auto py-8 relative">
-      <Slider {...settings}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="px-2">
-            <img
-              src={image.src}
-              alt={image.name}
-              className="rounded-lg"
-            />
-            <p className="text-center underline mt-2 text-sm">{image.name}</p>
-          </div>
-        ))}
-      </Slider>
-    </div>
+      </div>
+      <div className=" w-full md:max-w-screen-lg mx-auto py-8 relative">
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="px-2">
+              <img
+                src={image.src}
+                alt={image.name}
+                className="rounded-lg"
+              />
+              <p className="text-center underline mt-2 text-sm">{image.name}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

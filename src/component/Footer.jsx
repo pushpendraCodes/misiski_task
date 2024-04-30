@@ -5,7 +5,7 @@ const Footer = () => {
   const [appleQR, setApple] = useState(false);
   const [googleQR, setGoogle] = useState(false);
   return (
-    <div className="mt-6 w-[90%] m-auto">
+    <div className=" w-full px-2 py-2 mt-6 md:w-[90%] m-auto">
       <p className="text-black">
         Discover products for your store on the Faire wholesale marketplace
       </p>
@@ -19,31 +19,31 @@ const Footer = () => {
         expand their reach of independent shop owners.
       </p>
       <hr />
-      <div className="flex mt-10 px-10 py-10">
-        <div className="1 w-2/3 flex ">
-          <div className="w-1/5 flex flex-col gap-2">
+      <div className="flex flex-col md:flex-row mt-10 md:px-10 md:py-5">
+        <div className="1 w-full flex md:w-2/3 flex-col md:flex-row   ">
+          <div className="md:w-1/5 w-full flex flex-col gap-2 my-8">
             <p className="text-black ">Company</p>
             <p>About Us</p>
             <p>Newsroom</p>
             <p>Career</p>
           </div>
-          <div className="w-1/5 flex flex-col gap-2">
+          <div className="md:w-1/5 w-full flex flex-col my-8 gap-2">
             <p className="text-black ">Support</p>
             <p>Help Center</p>
             <p>Fauer Markets</p>
             <p>sell on faier</p>
           </div>
-          <div className="w-1/5 flex flex-col gap-2">
+          <div className="md:w-1/5 w-full flex flex-col my-8 gap-2">
             <p className="text-black ">Connect</p>
             <p>Blog</p>
             <p>Instagram</p>
             <p>Tweeter</p>
             <p>Facebook</p>
           </div>
-          <div className="w-1/5"></div>
-          <div className="w-1/5"></div>
+          <div className=" hidden md:block md:w-1/5"></div>
+          <div className=  "  hidden md:block md:w-1/5"></div>
         </div>
-        <div className="2 w-1/3">
+        <div className="2 w-full md:w-1/3">
           <p className="text-lg ">Get the Faire app</p>
           <p>
             Shop on the go, message brands, and track orders with the Faire app.
@@ -95,7 +95,7 @@ const Footer = () => {
       <div className="mt-10">
         <p>©2024 Faire Wholesale, Inc.</p>
         <div className="flex my-4 justify-between">
-          <div className="flex gap-3">
+          <div className=" grid grid-cols-3 md:flex gap-3">
             <p>Terms of Service</p>
             <p>. Privacy Policy</p>
             <p>.Cookie Policy</p>

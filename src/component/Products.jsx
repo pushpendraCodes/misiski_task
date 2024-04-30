@@ -21,7 +21,7 @@ const Products = () => {
   };
 
   return (
-    <div className="filters    w-[90%] m-auto">
+    <div className=" w-full filters    md:w-[90%] md:m-auto">
       <div className="my-10">
         <h1
           style={{ fontFamily: "nantes, georgia, serif" }}
@@ -36,7 +36,7 @@ const Products = () => {
         <Filters />
 
 
-      <div className="grid  grid-cols-5 my-4 gap-2">
+      <div className="grid grid-col-2  md:grid-cols-5 my-4 gap-2">
         {products &&
           products.map((item, i) => {
             return (
