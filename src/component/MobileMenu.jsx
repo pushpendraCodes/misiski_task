@@ -30,17 +30,22 @@ const MobileMenu = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Close drawer if click is outside of drawer container
       if (drawerRef.current && !drawerRef.current.contains(event.target)) {
         setOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    // Attach click event listener to document body
+    document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      // Cleanup event listener on component unmount
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once
+
+  const [isLangOpen, setLangOpen] = useState(false);
   return (
     <>
       <div
@@ -50,9 +55,7 @@ const MobileMenu = () => {
           Shop wholesale online from over 1,00,000 brands.{" "}
         </p>
       </div>
-      <div
-
-        className="flex   justify-between my-3">
+      <div className="flex   justify-between my-3">
         <div className="1 flex gap-2 items-center">
           <IoMenu
             onClick={() => setOpen((prev) => !prev)}
@@ -67,8 +70,8 @@ const MobileMenu = () => {
 
         {isOpen && (
           <div
-             ref={drawerRef}
-            onMouseDown={() => setOpen((prev) => !prev)}
+            ref={drawerRef}
+
             className="drawer ">
             <div className="top px-5 py-5 text-white bg-slate-600">
               <img
@@ -143,7 +146,6 @@ const MobileMenu = () => {
                 <span>All Trending Collection</span> <HiArrowLongRight />{" "}
               </p>
 
-
               <p>All Europion Brands</p>
               <p>Novelty gifts</p>
               <p>All Brands</p>
@@ -151,15 +153,39 @@ const MobileMenu = () => {
               <p>New Arivals</p>
               <p>Active Wear</p>
               <p>Trending on Faier</p>
-
             </div>
             <div className="flex px-5 py-5 flex-col gap-4">
-
-
-              <p className="flex justify-between items-center  ">
-                {" "}
+              <p
+                onClick={() => setLangOpen((prev) => !prev)}
+                className="flex justify-between items-center  ">
                 <span>English (US)</span> <IoChevronDown />{" "}
               </p>
+              {isLangOpen && (
+                <>
+                  <p className="flex justify-between items-center  ">
+                    {" "}
+                    <span>English (US)</span>
+                  </p>
+                  <p className="flex justify-between items-center  ">
+                    {" "}
+                    <span>English (Uk)</span>
+                  </p>
+                  <p className="flex justify-between items-center  ">
+                    {" "}
+                    <span>Italian</span>
+                  </p>
+                  <p className="flex justify-between items-center  ">
+                    {" "}
+                    <span>French</span>
+                  </p>
+                  <p className="flex justify-between items-center  ">
+                    {" "}
+                    <span>Hindi</span>
+                  </p>
+                </>
+              )}
+
+              <hr/>
               <p className="flex justify-between items-center  ">
                 {" "}
                 <span>Sign up to shop</span> <HiArrowLongRight />{" "}
@@ -180,10 +206,7 @@ const MobileMenu = () => {
                 {" "}
                 <span>Blog</span> <HiArrowLongRight />{" "}
               </p>
-
-
             </div>
-
           </div>
         )}
 
