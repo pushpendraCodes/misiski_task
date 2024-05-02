@@ -223,8 +223,8 @@ const MobileMenu = () => {
 
           <div className="flex items-center relative">
             <input placeholder="search products or brand"  className="search w-[80%]  focus:outline-none mx-4 my-3 h-full px-2 " type="text" />
-            <RxCross2 onClick={()=>alert("ebdej")} size={20} className="absolute right-20" />
-            <p onClick={()=>searchModal(false)} className="text-md">cancel</p>
+            <RxCross2  size={20} className="absolute right-20" />
+            <p onClick={()=>setSearch(false)} className="text-md">cancel</p>
 
           </div>
         </div>
