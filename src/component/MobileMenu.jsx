@@ -219,7 +219,7 @@ const MobileMenu = () => {
             Sign Up to shop
           </button>
       {
-        searchModal &&     <div className="mobile-searchModal">
+        searchModal &&     <div className="mobile-searchModal px-3">
 
           <div className="flex items-center relative">
             <input placeholder="search products or brand"  className="search w-[80%]  focus:outline-none mx-4 my-3 h-full px-2 " type="text" />
