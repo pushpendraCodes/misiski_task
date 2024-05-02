@@ -3,10 +3,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Transition } from "@headlessui/react";
 import { IoChevronDown, IoMenu, IoSearchOutline } from "react-icons/io5";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { RxCross2 } from "react-icons/rx";
 
 const MobileMenu = () => {
   const [isOpen, setOpen] = useState(false);
-
+  const [searchModal, setSearch] = useState(false);
   const drawerRef = useRef(null);
 
   useEffect(() => {
@@ -37,11 +38,11 @@ const MobileMenu = () => {
     };
 
     // Attach click event listener to document body
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
       // Cleanup event listener on component unmount
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []); // Empty dependency array ensures this effect runs only once
 
@@ -71,7 +72,6 @@ const MobileMenu = () => {
         {isOpen && (
           <div
             ref={drawerRef}
-
             className="drawer ">
             <div className="top px-5 py-5 text-white bg-slate-600">
               <img
@@ -185,7 +185,7 @@ const MobileMenu = () => {
                 </>
               )}
 
-              <hr/>
+              <hr />
               <p className="flex justify-between items-center  ">
                 {" "}
                 <span>Sign up to shop</span> <HiArrowLongRight />{" "}
@@ -211,10 +211,24 @@ const MobileMenu = () => {
         )}
 
         <div className="2 flex gap-2 items-center">
-          <IoSearchOutline className="w-5 h-6" />
+          <IoSearchOutline
+            onClick={() => setSearch((prev) => !prev)}
+            className="w-5 h-6"
+          />
           <button className="bg-gray-900  px-3 py-1 text-white">
             Sign Up to shop
           </button>
+      {
+        searchModal &&     <div className="mobile-searchModal">
+
+          <div className="flex items-center relative">
+            <input placeholder="search products or brand"  className="search w-[80%]  focus:outline-none mx-4 my-3 h-full px-2 " type="text" />
+            <RxCross2 onClick={()=>alert("ebdej")} size={20} className="absolute right-20" />
+            <p onClick={()=>searchModal(false)} className="text-md">cancel</p>
+
+          </div>
+        </div>
+      }
         </div>
       </div>
     </>

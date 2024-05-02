@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div
       style={{ backgroundColor: "rgb(89, 85, 64)" }}
-      className="banner text-white py-6 m-auto text-center">
+      className="banner px-1 text-white py-6 m-auto text-center">
       <div className="w-full  md:w-[40%] mx-auto">
         <h1 className="text-3xl">Ready to start buying wholesale online?</h1>
         <div className="px-5">

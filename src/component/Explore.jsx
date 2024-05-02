@@ -58,7 +58,7 @@ const Explore = ({ images }) => {
   };
 
   return (
-    <div className=" w-full md:max-w-[90%] m-auto">
+    <div className=" w-full px-1 md:max-w-[90%] m-auto">
       <div
         style={{ fontFamily: "nantes, georgia, serif" }}
         className="flex justify-between my-4">

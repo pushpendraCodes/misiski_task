@@ -21,7 +21,7 @@ const Products = () => {
   };
 
   return (
-    <div className=" w-full filters    md:w-[90%] md:m-auto">
+    <div className=" w-full filters  px-1  md:w-[90%] md:m-auto">
       <div className="my-10">
         <h1
           style={{ fontFamily: "nantes, georgia, serif" }}
